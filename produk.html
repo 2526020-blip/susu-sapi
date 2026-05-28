@@ -1,7 +1,3 @@
-<!-- =========================
-FILE: product1.html
-HALAMAN 2 - DETAIL PRODUK
-========================= -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,7 +8,11 @@ HALAMAN 2 - DETAIL PRODUK
 <style>
 
 body{
-  background:#111;
+  background:
+  linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)),
+  url('https://images.unsplash.com/photo-1491553895911-0055eca6402d');
+  background-size:cover;
+  background-position:center;
   color:white;
   font-family:Arial;
   margin:0;
@@ -21,13 +21,26 @@ body{
 .container{
   display:flex;
   gap:40px;
-  padding:50px;
+  padding:60px;
   flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+.product-box{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(14px);
+  border-radius:30px;
+  padding:40px;
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 img{
-  width:450px;
-  border-radius:20px;
+  width:420px;
+  border-radius:25px;
 }
 
 .info{
@@ -35,37 +48,41 @@ img{
 }
 
 h1{
-  color:red;
+  color:#ffe0e0;
   font-size:50px;
 }
 
 .price{
-  color:#ff2b2b;
+  color:#ffd6d6;
   font-size:35px;
   margin:20px 0;
+}
+
+p{
+  color:#ddd;
+  line-height:1.8;
 }
 
 button{
   padding:15px 30px;
   border:none;
   margin-right:20px;
-  border-radius:10px;
+  border-radius:14px;
   font-size:18px;
   cursor:pointer;
+  transition:0.3s;
 }
 
 .cart{
-  background:gray;
-  color:white;
+  background:#ccc;
 }
 
 .buy{
-  background:red;
-  color:white;
+  background:#f0cfcf;
 }
 
 button:hover{
-  opacity:0.8;
+  transform:scale(1.05);
 }
 
 </style>
@@ -75,6 +92,8 @@ button:hover{
 
 <div class="container">
 
+<div class="product-box">
+
 <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
 
 <div class="info">
@@ -83,17 +102,19 @@ button:hover{
   <div class="price">Rp 980.000.000</div>
 
   <p>
-    Sepatu limited edition khusus kolektor elite dunia.
-    Dibuat menggunakan material premium dengan desain futuristik.
+    Sepatu limited edition dengan material premium dan desain futuristik.
+    Cocok untuk kolektor luxury fashion kelas atas.
   </p>
 
   <br>
 
   <button class="cart">Masukkan Keranjang</button>
 
-  <a href="delivery.html">
+  <a href="pengiriman.html">
     <button class="buy">Check Out</button>
   </a>
+
+</div>
 
 </div>
 
