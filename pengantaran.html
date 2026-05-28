@@ -1,88 +1,101 @@
-<!-- =========================
-FILE: delivery.html
-HALAMAN 3 - PENGIRIMAN
-========================= -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pengiriman</title>
+<title>Pembayaran & Pengiriman</title>
 
 <style>
 
 body{
-  background:#111;
-  overflow:hidden;
-  margin:0;
-  font-family:Arial;
+  background:
+  linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.92)),
+  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+  background-size:cover;
   color:white;
+  font-family:Arial;
+  margin:0;
+}
+
+.container{
+  padding:50px;
+}
+
+.box{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(14px);
+  border-radius:30px;
+  padding:40px;
 }
 
 h1{
-  text-align:center;
-  margin-top:40px;
-  color:red;
+  color:#ffe1e1;
+  margin-bottom:30px;
+}
+
+.payment-method{
+  margin-top:30px;
+}
+
+.method{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:18px;
+  margin-bottom:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.method:hover{
+  background:rgba(255,255,255,0.1);
 }
 
 .road{
   position:relative;
   width:100%;
-  height:300px;
-  background:#222;
-  margin-top:150px;
-  border-top:5px solid white;
+  height:240px;
+  background:rgba(255,255,255,0.04);
+  border-radius:25px;
+  margin-top:40px;
 }
 
 .line{
   position:absolute;
-  top:145px;
+  top:120px;
   width:100%;
-  height:10px;
-  background:repeating-linear-gradient(
-    to right,
-    white 0px,
-    white 50px,
-    transparent 50px,
-    transparent 100px
-  );
+  height:8px;
+  background:repeating-linear-gradient(to right,white 0px,white 40px,transparent 40px,transparent 80px);
 }
 
 .truck{
   position:absolute;
-  bottom:50px;
-  left:-300px;
-  font-size:120px;
+  bottom:40px;
+  left:-200px;
+  font-size:100px;
   animation:drive 8s linear infinite;
 }
 
 .house{
   position:absolute;
-  right:100px;
-  bottom:30px;
-  font-size:120px;
+  right:50px;
+  bottom:35px;
+  font-size:100px;
 }
 
 @keyframes drive{
-  from{
-    left:-300px;
-  }
-
-  to{
-    left:100%;
-  }
+  from{left:-200px;}
+  to{left:100%;}
 }
 
 .btn{
-  position:absolute;
-  bottom:40px;
-  left:50%;
-  transform:translateX(-50%);
-  background:red;
-  padding:15px 30px;
-  color:white;
+  display:inline-block;
+  margin-top:40px;
+  background:#f0cfcf;
+  color:black;
+  padding:15px 28px;
+  border-radius:14px;
   text-decoration:none;
-  border-radius:10px;
+  font-weight:bold;
 }
 
 </style>
@@ -90,21 +103,38 @@ h1{
 
 <body>
 
-<h1>Produk Sedang Dikirim...</h1>
+<div class="container">
 
-<div class="road">
+<div class="box">
 
-  <div class="line"></div>
+<h1>Check Out Produk</h1>
 
-  <div class="truck">🚚</div>
+<h2>Sterling Red Shoes</h2>
+<p>Harga: Rp 980.000.000</p>
+<p>Rating: ★★★★★</p>
 
-  <div class="house">🏠</div>
+<div class="payment-method">
+<h2>Metode Pembayaran</h2>
+
+<div class="method">💳 Bank BCA</div>
+<div class="method">🏦 Bank BRI</div>
+<div class="method">📱 Telkomsels SterlingPay</div>
+<div class="method">💰 Dana Premium</div>
+<div class="method">⚡ QRIS Luxury Payment</div>
 
 </div>
 
-<a href="chat.html" class="btn">
-  Lanjut ke Chat Produsen
-</a>
+<div class="road">
+<div class="line"></div>
+<div class="truck">🚚</div>
+<div class="house">🏠</div>
+</div>
+
+<a href="chat.html" class="btn">Lanjut ke Chat</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
